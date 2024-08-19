@@ -1,0 +1,94 @@
+.footer {
+  /* background-color: #1a1a1a; */
+  /* color: white; */
+  padding: 20px;
+  text-align: center;
+  font-size: 12px;
+  position: absolute;
+  border-top: 1px solid #d9d9d9;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+.footerLogo {
+  width: 12rem;
+}
+
+.footer a {
+  color: #000;
+  text-decoration: none;
+  line-height: 2;
+}
+.footer h {
+  font-weight: bold;
+  /* margin-bottom: 1rem; */
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Two columns: one for the icon, one for the text */
+  gap: 0.5rem; /* Space between items */
+  align-items: center; /* Center items vertically */
+}
+
+.contact-item {
+  display: contents; /* Use contents to make each child of grid-container behave as a grid item */
+}
+
+.contact-item > .fa-icon {
+  font-size: 24px; /* Uniform icon size */
+  align-self: center; /* Vertically align icon */
+}
+
+.contact-text {
+  font-size: 1rem; /* Adjust text size as needed */
+  align-self: center; /* Vertically align text */
+}
+.socialMediaLogos {
+  display: flex;
+  gap: 1rem;
+}
+
+/* make the footer position relative when smaller then 768px and min 521px */
+@media (min-width: 521px) and (max-width: 768px) {
+  .footer {
+    position: relative;
+    height: 100%;
+  }
+  .col-md-2,
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 50%;
+    align-items: center;
+    display: flex !important;
+    flex-direction: column;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 0;
+  }
+}
+/*now max width 520px*/
+@media (max-width: 520px) {
+  .footer {
+    position: relative;
+    height: 100%;
+  }
+  .col-md-2,
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex !important;
+    flex-direction: column;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .row:first-of-type > div {
+    padding: 0.5rem 0 0 0;
+  }
+}
