@@ -1,12 +1,9 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import Lincolab from "../components/Lincolab";
 import "../styles/Home.css";
 import bgImage from "../assets/images/backgroundHome.png";
 function Home() {
   return (
     <>
-      <Navbar />
       <div className="homeContainer">
         <div className="homeTopSection w-100 align-items-center d-flex flex-nowrap justify-content-center flex-column">
           <Lincolab />
@@ -26,7 +23,6 @@ function Home() {
           </p>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

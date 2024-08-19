@@ -27,7 +27,3 @@
   object-fit: cover;
   object-position: top center;
 }
-
-.homeContainer {
-  flex: 1;
-}
