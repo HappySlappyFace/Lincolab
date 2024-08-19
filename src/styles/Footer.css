@@ -4,12 +4,9 @@
   padding: 20px;
   text-align: center;
   font-size: 12px;
-  position: absolute;
   border-top: 1px solid #d9d9d9;
-  bottom: 0;
   width: 100%;
   height: auto;
-  margin-top: 20px;
 }
 .footerLogo {
   width: 12rem;
