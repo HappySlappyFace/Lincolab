@@ -1,4 +1,4 @@
-import "../styles/Footer.css";
+import "../styles/components/Footer.css";
 import Lincolab from "./Lincolab";
 import { faFacebook, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import {

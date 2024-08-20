@@ -1,0 +1,12 @@
+// Override Bootstrap theme colors
+$primary: #386db9; // Replace with your custom color
+$secondary: #6c757d; // Replace with your custom color
+$success: #28a745; // Replace with your custom color
+$info: #17a2b8; // Replace with your custom color
+$warning: #ffc107; // Replace with your custom color
+$danger: #dc3545; // Replace with your custom color
+$light: #f8f9fa; // Replace with your custom color
+$dark: #2c2c2c; // Replace with your custom color
+
+// Import Bootstrap's main SCSS file
+@import "bootstrap/scss/bootstrap";

@@ -1,5 +1,5 @@
 import logo from "../assets/LINCOLAB.png";
-import "../styles/Navbar.css";
+import "../styles/components/Navbar.css";
 import { NavLink } from "react-router-dom";
 function Navbar() {
   return (
@@ -7,12 +7,14 @@ function Navbar() {
       <div>
         <nav className="navbar navbar-expand-lg bg-white">
           <div className="container-fluid">
-            <img
-              src={logo}
-              className="navbar-brand"
-              alt="Lincolab"
-              height="40px"
-            />
+            <NavLink to="/">
+              <img
+                src={logo}
+                className="navbar-brand"
+                alt="Lincolab"
+                height="40px"
+              />
+            </NavLink>
             <button
               className="navbar-toggler"
               type="button"
