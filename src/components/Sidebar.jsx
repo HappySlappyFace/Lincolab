@@ -1,45 +1,63 @@
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { PropTypes } from "prop-types";
+import "../styles/components/Sidebar.css";
 
-function Sidebar() {
-  const [selectedService, setSelectedService] = useState(null);
-
-  const handleServiceClick = (service) => {
-    setSelectedService(service);
+function Sidebar({ labName = "Lab name" }) {
+  Sidebar.propTypes = {
+    labName: PropTypes.string,
   };
 
   return (
     <div className="sidebar">
-      <ul>
-        <li>
-          <NavLink
-            to="/service1"
-            className={selectedService === "service1" ? "active" : ""}
-            onClick={() => handleServiceClick("service1")}
-          >
-            Service 1
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/service2"
-            className={selectedService === "service2" ? "active" : ""}
-            onClick={() => handleServiceClick("service2")}
-          >
-            Service 2
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/service3"
-            className={selectedService === "service3" ? "active" : ""}
-            onClick={() => handleServiceClick("service3")}
-          >
-            Service 3
-          </NavLink>
-        </li>
-        {/* Add more services as needed */}
-      </ul>
+      <div className="sidebar-header">
+        <FontAwesomeIcon icon={faUser} className="user-icon" />
+        <h4>{labName}</h4>
+      </div>
+
+      <div className="nav flex-column">
+        <NavLink
+          to="/dashboard"
+          className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+        >
+          Dashboard
+        </NavLink>
+        <NavLink
+          to="/outsource-request"
+          className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+        >
+          Outsource request
+        </NavLink>
+        <NavLink
+          to="/sample-management"
+          className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+        >
+          Sample management
+        </NavLink>
+        <NavLink
+          to="/settings"
+          className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+        >
+          Settings
+        </NavLink>
+      </div>
+
+      <div className="nav flex-column mt-4">
+        <h6 className="section-title">Customer support</h6>
+        <NavLink
+          to="/feedback"
+          className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+        >
+          Feedback
+        </NavLink>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+        >
+          Contact
+        </NavLink>
+      </div>
     </div>
   );
 }

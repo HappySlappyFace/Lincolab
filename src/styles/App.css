@@ -75,3 +75,6 @@ main {
   flex: 1;
   display: flex;
 }
+#root > .d-flex > .d-flex {
+  flex: 1;
+}

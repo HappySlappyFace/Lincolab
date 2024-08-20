@@ -1,0 +1,64 @@
+/* custom.scss or App.css */
+
+.sidebar {
+  width: 300px;
+  background-color: #ebeef9; /* Light background */
+  /* height: 100%; */
+  padding: 27px 16px 0px 16px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Arial", sans-serif;
+}
+
+.sidebar-header {
+  margin-bottom: 20px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #343a40;
+}
+
+.sidebar-header .user-icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.sidebar-header h4 {
+  color: #343a40; /* Dark text for the lab name */
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.sidebar .nav-link {
+  color: #343a40; /* Dark text color */
+  padding: 10px;
+  padding-left: 2rem;
+  text-decoration: none;
+  border-radius: 11px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1rem;
+  display: block;
+}
+
+.sidebar .nav-link.active {
+  background-color: #fff; /* Highlight active link with a white background */
+  color: #343a40; /* Keep text dark */
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for the active item */
+}
+
+.sidebar .nav-link:hover {
+  background-color: #d1d8f3; /* Slightly darker background on hover */
+  color: #343a40;
+}
+
+.section-title {
+  color: #343a40; /* Dark text for section titles */
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  opacity: 0.6;
+}

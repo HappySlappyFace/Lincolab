@@ -14,7 +14,7 @@ function Footer() {
       <div className="footer">
         {/* for the footer have 4 parts, 1st one will have the logo and icons to social media and email and location, 2nd about us, 3rd solutions and last account  */}
         <div className="row">
-          <div className="col-md-4 d-grid text-start gap-2">
+          <div className="col-md-4 text-start gap-2">
             <Lincolab />
             <div className="socialMediaLogos">
               <a

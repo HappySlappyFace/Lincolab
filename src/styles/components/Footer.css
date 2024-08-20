@@ -47,6 +47,12 @@
 }
 
 /* make the footer position relative when smaller then 768px and min 521px */
+@media (min-width: 768px) {
+  .col-md-4 {
+    display: grid;
+  }
+}
+
 @media (min-width: 521px) and (max-width: 768px) {
   .footer {
     position: relative;
@@ -55,7 +61,7 @@
   .col-md-2,
   .col-md-4 {
     flex: 0 0 100%;
-    max-width: 50%;
+    max-width: 50% !important;
     align-items: center;
     display: flex !important;
     flex-direction: column;
