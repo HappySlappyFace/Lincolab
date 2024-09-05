@@ -18,14 +18,20 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Test from "./pages/Test";
+import SampleManagement from "./pages/SampleManagement";
+import OutsourceRequest from "./pages/OutsourceRequest";
 
 function MainContent() {
   const location = useLocation();
 
   // Determine if the sidebar should be shown based on the current route
-  const showSidebar = ["/about", "/contact", "/test"].includes(
-    location.pathname
-  );
+  const showSidebar = [
+    "/about",
+    "/contact",
+    "/test",
+    "/sample-management",
+    "/outsource-request",
+  ].includes(location.pathname);
 
   return (
     <div className="d-flex">
@@ -38,6 +44,9 @@ function MainContent() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/test" element={<Test />} />
+          <Route path="/sample-management" element={<SampleManagement />} />
+          <Route path="/outsource-request" element={<OutsourceRequest />} />
+
           {/* Add more routes here */}
         </Routes>
       </main>
